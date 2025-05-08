@@ -39,7 +39,5 @@ def get_survey_data():
             "plasticBottles": 0,
             "paperPackages": 0
         },
-        "total": {
-            "total": 10.0,
-        }
+        "total": 10.0
     }
