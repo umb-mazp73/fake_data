@@ -16,13 +16,13 @@ def get_survey_data():
     return {
         "date": datetime.utcnow().isoformat(),
         "energy": {
-            "applianceHours": 0,
+            "applianceHours": 6,
             "lightBulbs": 2,
             "gasTanks": 3,
-            "hvacHours": 0
+            "hvacHours": 7
         },
         "food": {
-            "redMeat": 0,
+            "redMeat": 9,
             "whiteMeat": 5,
             "dairy": 7,
             "vegetarian": 0
@@ -30,13 +30,13 @@ def get_survey_data():
         "transport": {
             "carKm": 8,
             "publicKm": 0,
-            "domesticFlights": 0,
+            "domesticFlights": 11,
             "internationalFlights": 0
         },
         "waste": {
             "trashBags": 9,
             "foodWaste": 0,
-            "plasticBottles": 0,
+            "plasticBottles": 111,
             "paperPackages": 0
         },
         "total": 50.0
