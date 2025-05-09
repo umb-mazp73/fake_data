@@ -1,6 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
+import json
 
 app = FastAPI()
 
@@ -41,3 +42,9 @@ def get_survey_data():
         },
         "total": 50.0
     }
+
+@app.post("/procesar_datos")
+async def procesar_datos(request: Request):
+    data = await request.json()
+    print("Servicio receptor recibió:\n", json.dumps(data, indent=4))
+    return {"message": "Datos procesados correctamente"}
