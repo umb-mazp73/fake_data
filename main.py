@@ -12,9 +12,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-@app.get("/fake_data")
-def get_survey_data():
-    return {
+
+@app.post("/enviar_calculos")
+async def enviar_calculos():
+    json_recomendaciones = {
         "date": datetime.utcnow().isoformat(),
         "energy": {
             "applianceHours": 24,
@@ -42,9 +43,4 @@ def get_survey_data():
         },
         "total": 50.0
     }
-
-@app.post("/procesar_datos")
-async def procesar_datos(request: Request):
-    data = await request.json()
-    print("Servicio receptor recibió:\n", json.dumps(data, indent=4))
-    return {"message": "Datos procesados correctamente"}
+    return {"response_data": json_recomendaciones}
