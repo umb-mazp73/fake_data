@@ -18,28 +18,28 @@ async def enviar_calculos():
     json_recomendaciones = {
         "date": datetime.utcnow().isoformat(),
         "energy": {
-            "applianceHours": 1,
-            "gasTanks": 3,
-            "hvacHours": 4,
-            "lightBulbs": 1
+            "applianceHours": 24,
+            "gasTanks": 20,
+            "hvacHours": 5,
+            "lightBulbs": 24
         },
         "food": {
-            "dairy": 5,
-            "redMeat": 1,
-            "vegetarian": 0,
-            "whiteMeat": 1
+            "dairy": 14,
+            "redMeat": 14,
+            "vegetarian": 21,
+            "whiteMeat": 21
         },
         "transport": {
-            "carKm": 1,
-            "domesticFlights": 1,
-            "internationalFlights": 0,
-            "publicKm": 1
+            "carKm": 1000,
+            "domesticFlights": 500,
+            "internationalFlights": 20,
+            "publicKm": 10
         },
         "waste": {
-            "foodWaste": 5,
-            "paperPackages": 1,
-            "plasticBottles": 1,
-            "trashBags": 1
+            "foodWaste": 20,
+            "paperPackages": 20,
+            "plasticBottles": 50,
+            "trashBags": 20
         },
         "result": 66.3
     }
